@@ -42,7 +42,28 @@ module.exports = {
       throw error;
     }
   },
-
+  findAndCountRecord: async(req, res) => {
+    try{
+     
+      let response = await Models.userModel.findAndCountAll();
+       return res.send(response);
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  },
+Count:  async(req, res) => {
+  try{
+   
+    let response = await Models.userModel.Count();
+     return res.send(response);
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+  
+  
 
   
 };
