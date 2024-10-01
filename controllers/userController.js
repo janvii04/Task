@@ -52,18 +52,13 @@ module.exports = {
       throw error;
     }
   },
-Count:  async(req, res) => {
+count:  async(req, res) => {
   try{
-   
-    let response = await Models.userModel.Count();
+    let response = await Models.userModel.count();
      return res.send(response);
   } catch (error) {
     console.log(error);
     throw error;
   }
 }
-  
-  
-
-  
 };
